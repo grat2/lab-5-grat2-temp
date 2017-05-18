@@ -49,7 +49,7 @@ def add(anylist, index, value):
 # AnyList -> integer
 # returns the length of the given list
 def length(anylist):
-    if(anylist == None):
+    if(anylist == None or anylist == empty_list()):
         return 0
     i = 0
     lenOfList = 0

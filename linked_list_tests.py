@@ -12,6 +12,7 @@ class TestCase(unittest.TestCase):
         self.assertEqual(add(Pair(5, Pair(10, None)), 0, 21), Pair(21, Pair(5, Pair(10, None))))
         self.assertEqual(add(Pair(1234, None), 1, 123), Pair(1234, Pair(123, None)))
         self.assertEqual(add(Pair(1234, None), 0, 136), Pair(136, Pair(1234, None)))
+        self.assertEqual(add(None, 0, 5), Pair(5, None))
         self.assertRaises(IndexError, add, Pair(5, None), 2, "nope")
     def test_length(self):
         self.assertEqual(length(Pair(1, Pair(2, Pair(3, Pair(4, Pair(5, None)))))), 5)

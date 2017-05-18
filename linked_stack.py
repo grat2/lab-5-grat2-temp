@@ -1,4 +1,4 @@
-from array_list import *
+from linked_list import *
 
 # a Stack is Stack(list)
 class Stack:
@@ -18,7 +18,7 @@ def empty_stack():
 # Stack value -> Stack
 # pushes a value to a stack and returns the new stack
 def push(stack, value):
-    if(stack.l == None or stack.l == empty_list()):
+    if(stack.l == empty_list()):
         stack.l = add(empty_list(), 0, value)
         return stack
     else:
